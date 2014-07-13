@@ -204,7 +204,7 @@ if [ "$lock" -eq 1 ]; then
 fi
 
 if [ "$mail" -eq  1 ] && [ "$warn_handler_called" -eq 1 ]; then
-    (echo 'Please check wiki page : '"$wiki_url"; echo -e "$mail_msg")| \
+    (echo "Please check wiki page : $wiki_url"; echo -e "$mail_msg")| \
       mail -s "authorized_keys violation alert at `hostname`" "$alert_mail"
 fi
 # EOF
